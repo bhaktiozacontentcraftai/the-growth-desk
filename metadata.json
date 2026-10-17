@@ -1,0 +1,6 @@
+{
+  "name": "The Growth Desk",
+  "description": "Production-ready, SEO-optimized editorial publication featuring in-depth guides on SEO, digital marketing, content strategy, and online business growth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

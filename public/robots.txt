@@ -1,0 +1,6 @@
+# https://thegrowthdesk.com robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://thegrowthdesk.com/sitemap.xml
