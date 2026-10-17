@@ -233,13 +233,15 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
               {article.sections.map((section) => (
                 <section key={section.id} id={section.id} className="scroll-mt-24 space-y-4">
                   {section.heading && (
-                    <h2
-                      className={`font-serif font-bold text-stone-900 tracking-tight ${
-                        section.level === 3 ? 'text-xl sm:text-2xl pt-2' : 'text-2xl sm:text-3xl border-b border-stone-200 pb-2'
-                      }`}
-                    >
-                      {section.heading}
-                    </h2>
+                    section.level === 3 ? (
+                      <h3 className="font-serif font-bold text-stone-900 tracking-tight text-xl sm:text-2xl pt-2">
+                        {section.heading}
+                      </h3>
+                    ) : (
+                      <h2 className="font-serif font-bold text-stone-900 tracking-tight text-2xl sm:text-3xl border-b border-stone-200 pb-2">
+                        {section.heading}
+                      </h2>
+                    )
                   )}
 
                   {section.paragraphs.map((para, pIdx) => (
