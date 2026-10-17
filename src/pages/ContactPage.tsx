@@ -13,8 +13,8 @@ export const ContactPage: React.FC = () => {
 
   useEffect(() => {
     updatePageSEO({
-      title: 'Contact Editorial Desk — The Growth Desk',
-      description: 'Get in touch with The Growth Desk editorial team for inquiries, topic suggestions, technical corrections, or partnership questions.',
+      title: 'Contact the Editorial Team — The Growth Desk',
+      description: 'Get in touch with The Growth Desk editorial team for editorial inquiries, topic suggestions, technical corrections, feedback, and partnership opportunities.',
       canonicalPath: '/contact/',
       ogType: 'website',
       breadcrumbs: [{ name: 'Contact', path: '/contact/' }],

@@ -7,7 +7,7 @@ import { Link } from '../utils/router';
 export const AboutPage: React.FC = () => {
   useEffect(() => {
     updatePageSEO({
-      title: 'About Our Publication — The Growth Desk',
+      title: 'About The Growth Desk — Our Editorial Mission & Standards',
       description: 'Learn about The Growth Desk, our editorial standards, our focus on technical SEO and content strategy, and our commitment to tested growth frameworks.',
       canonicalPath: '/about/',
       ogType: 'website',

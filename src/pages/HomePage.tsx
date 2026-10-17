@@ -15,8 +15,8 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNewsletter }) => {
   useEffect(() => {
     updatePageSEO({
-      title: 'The Growth Desk — Digital Marketing, SEO & Online Business Guides',
-      description: 'Production-ready, SEO-optimized editorial publication featuring in-depth guides on SEO, digital marketing, content strategy, and online business growth for creators and small businesses.',
+      title: 'The Growth Desk — SEO, Content & Digital Marketing Guides',
+      description: 'Practical, in-depth guides on SEO, content strategy, and website optimization to help creators, bloggers, and founders grow compounding organic search traffic.',
       canonicalPath: '/',
       ogType: 'website',
       image: '/images/hero-growth-desk.jpg',

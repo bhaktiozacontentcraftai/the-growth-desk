@@ -33,32 +33,50 @@ export const updatePageSEO = (config: SEOConfig) => {
   // 1. Title
   document.title = fullTitle;
 
-  // 2. Meta description
-  let descMeta = document.querySelector('meta[name="description"]');
-  if (!descMeta) {
+  // 2. Meta description (prevent duplicate tags)
+  const descMetas = document.querySelectorAll('meta[name="description"]');
+  let descMeta: HTMLMetaElement;
+  if (descMetas.length > 0) {
+    descMeta = descMetas[0] as HTMLMetaElement;
+    for (let i = 1; i < descMetas.length; i++) {
+      descMetas[i].remove();
+    }
+  } else {
     descMeta = document.createElement('meta');
     descMeta.setAttribute('name', 'description');
     document.head.appendChild(descMeta);
   }
   descMeta.setAttribute('content', config.description);
 
-  // 3. Canonical link
+  // 3. Canonical link (prevent duplicate tags)
   const canonicalUrl = config.canonicalPath
     ? `${siteUrl}${config.canonicalPath.startsWith('/') ? '' : '/'}${config.canonicalPath}`
     : `${siteUrl}${window.location.pathname}`;
 
-  let canonicalLink = document.querySelector('link[rel="canonical"]');
-  if (!canonicalLink) {
+  const canonicalLinks = document.querySelectorAll('link[rel="canonical"]');
+  let canonicalLink: HTMLLinkElement;
+  if (canonicalLinks.length > 0) {
+    canonicalLink = canonicalLinks[0] as HTMLLinkElement;
+    for (let i = 1; i < canonicalLinks.length; i++) {
+      canonicalLinks[i].remove();
+    }
+  } else {
     canonicalLink = document.createElement('link');
     canonicalLink.setAttribute('rel', 'canonical');
     document.head.appendChild(canonicalLink);
   }
   canonicalLink.setAttribute('href', canonicalUrl);
 
-  // 4. OpenGraph Tags
+  // 4. OpenGraph Tags (prevent duplicate tags)
   const setMeta = (attr: 'name' | 'property', key: string, value: string) => {
-    let el = document.querySelector(`meta[${attr}="${key}"]`);
-    if (!el) {
+    const elements = document.querySelectorAll(`meta[${attr}="${key}"]`);
+    let el: HTMLMetaElement;
+    if (elements.length > 0) {
+      el = elements[0] as HTMLMetaElement;
+      for (let i = 1; i < elements.length; i++) {
+        elements[i].remove();
+      }
+    } else {
       el = document.createElement('meta');
       el.setAttribute(attr, key);
       document.head.appendChild(el);

@@ -5,8 +5,8 @@ import { updatePageSEO } from '../utils/seo';
 export const PrivacyPolicyPage: React.FC = () => {
   useEffect(() => {
     updatePageSEO({
-      title: 'Privacy Policy — The Growth Desk',
-      description: 'Privacy policy for The Growth Desk. Learn what data we collect, how we respect user privacy, cookie disclosures, and data protection practices.',
+      title: 'Privacy Policy & Data Protection — The Growth Desk',
+      description: 'Read the privacy policy for The Growth Desk. Learn what data we collect, how we respect reader privacy, cookie disclosures, and data protection practices.',
       canonicalPath: '/privacy-policy/',
       ogType: 'website',
       breadcrumbs: [{ name: 'Privacy Policy', path: '/privacy-policy/' }],

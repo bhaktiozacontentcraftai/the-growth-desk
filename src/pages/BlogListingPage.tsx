@@ -25,15 +25,25 @@ export const BlogListingPage: React.FC = () => {
         setSearchQuery(qParam);
       }
     }
+  }, []);
+
+  useEffect(() => {
+    const categoryObj = CATEGORIES.find((c) => c.id === selectedCategory);
+    const title = categoryObj
+      ? `${categoryObj.name} Guides — The Growth Desk`
+      : 'SEO & Content Marketing Guides Library — The Growth Desk';
+    const description = categoryObj
+      ? `Explore actionable ${categoryObj.name.toLowerCase()} guides, practical checklists, and proven growth tutorials published by The Growth Desk editorial team.`
+      : 'Explore our complete library of actionable SEO guides, content marketing blueprints, technical optimization checklists, and blogging tutorials for creators.';
 
     updatePageSEO({
-      title: 'All Guides & Articles — The Growth Desk',
-      description: 'Explore our complete library of actionable SEO guides, content marketing blueprints, technical optimization checklists, and blogging tutorials.',
+      title,
+      description,
       canonicalPath: '/blog/',
       ogType: 'website',
       breadcrumbs: [{ name: 'Articles', path: '/blog/' }],
     });
-  }, []);
+  }, [selectedCategory]);
 
   const filteredArticles = useMemo(() => {
     return ARTICLES.filter((article) => {

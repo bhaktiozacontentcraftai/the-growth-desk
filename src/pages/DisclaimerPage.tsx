@@ -6,7 +6,7 @@ export const DisclaimerPage: React.FC = () => {
   useEffect(() => {
     updatePageSEO({
       title: 'Editorial & Affiliate Disclaimer — The Growth Desk',
-      description: 'Editorial disclaimer for The Growth Desk. Disclosures regarding educational purpose, affiliate links, and professional advice limitations.',
+      description: 'Read The Growth Desk editorial and affiliate disclaimer. Disclosures regarding our educational purpose, affiliate partnerships, and testing methodologies.',
       canonicalPath: '/disclaimer/',
       ogType: 'website',
       breadcrumbs: [{ name: 'Disclaimer', path: '/disclaimer/' }],
