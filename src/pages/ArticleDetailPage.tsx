@@ -164,26 +164,29 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
         </header>
 
         {/* Hero Visual Asset */}
-        <div className="aspect-16/9 max-w-4xl overflow-hidden rounded-xl bg-stone-100 border border-stone-200/90 relative">
-          {!imageError ? (
-            <img
-              src={article.heroImage}
-              alt={article.altText}
-              referrerPolicy="no-referrer"
-              onError={() => setImageError(true)}
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
-          ) : (
-            <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-stone-100 text-stone-400">
-              <BookOpen className="w-12 h-12 mb-3 opacity-40" />
-              <p className="text-xs text-stone-500 font-medium">{article.title}</p>
-            </div>
-          )}
-          <figcaption className="text-[11px] text-stone-500 italic mt-2 text-right">
+        <figure className="max-w-4xl space-y-2">
+          <div className="aspect-16/9 w-full overflow-hidden rounded-xl bg-stone-100 border border-stone-200/90 relative">
+            {!imageError ? (
+              <img
+                src={article.heroImage}
+                alt={article.altText}
+                referrerPolicy="no-referrer"
+                onError={() => setImageError(true)}
+                className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+              />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-stone-100 text-stone-400">
+                <BookOpen className="w-12 h-12 mb-3 opacity-40" />
+                <p className="text-xs text-stone-500 font-medium">{article.title}</p>
+              </div>
+            )}
+          </div>
+          <figcaption className="text-[11px] text-stone-500 italic text-right px-1">
             {article.altText}
           </figcaption>
-        </div>
+        </figure>
 
         {/* Main Content Layout with Sticky Sidebar */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -244,6 +247,26 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
                       {para}
                     </p>
                   ))}
+
+                  {/* In-Article Contextual Figure / Diagram */}
+                  {section.image && (
+                    <figure className="my-6 rounded-xl overflow-hidden border border-stone-200/90 bg-stone-50/60 shadow-xs">
+                      <div className="w-full overflow-hidden bg-stone-100 aspect-16/9">
+                        <img
+                          src={section.image.src}
+                          alt={section.image.alt}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                      {section.image.caption && (
+                        <figcaption className="px-4 py-2.5 text-xs text-stone-600 italic bg-stone-100/70 border-t border-stone-200/60 flex items-center justify-between">
+                          <span>{section.image.caption}</span>
+                          <span className="text-[10px] uppercase font-mono tracking-wider text-stone-400 not-italic">Figure</span>
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
 
                   {/* Callout box if present */}
                   {section.callout && (

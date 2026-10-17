@@ -24,8 +24,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 15, 2026',
     updatedAt: 'October 16, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/growth_editorial_hero_1792227058531.jpg',
-    altText: 'Minimalist editorial workspace showing search traffic growth charts and planning notebook',
+    heroImage: '/images/seo-for-beginners.jpg',
+    altText: 'Clean minimalist modern editorial workspace with laptop displaying search traffic growth charts and open notebook',
     featured: true,
     popular: true,
     tableOfContents: [
@@ -58,6 +58,12 @@ export const ARTICLES: Article[] = [
           'Before touching any keyword tool or meta tag, you must understand what search engines do behind the scenes. Search algorithms do not read web pages like humans; they process web documents through automated bots called crawlers (or spiders).',
           'The entire process occurs in three distinct stages:',
         ],
+        image: {
+          src: '/images/seo-for-beginners.jpg',
+          alt: 'Search engine crawling, indexing, and ranking pipeline diagram',
+          caption: 'Figure 1: The three-stage discovery pipeline: crawling web links, indexing parsed content, and ranking search queries.',
+          aspectRatio: '16/9',
+        },
         list: {
           type: 'ordered',
           items: [
@@ -212,8 +218,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 14, 2026',
     updatedAt: 'October 16, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/seo_analytics_desk_1792227058801.jpg',
-    altText: 'Computer monitor displaying search ranking audit charts and organic keyword tables',
+    heroImage: '/images/keyword-research-guide.jpg',
+    altText: 'Desk workstation with monitor displaying search keyword analysis, organic traffic metrics, and keyword position rankings',
     featured: false,
     popular: true,
     tableOfContents: [
@@ -251,6 +257,12 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Not all keywords are created equal. When evaluating potential topics for your editorial calendar, assess these three essential dimensions:',
         ],
+        image: {
+          src: '/images/keyword-research-guide.jpg',
+          alt: 'Keyword research analytics dashboard showing search volume, keyword difficulty, and intent classification',
+          caption: 'Figure 1: Evaluating keyword volume, competition density, and user intent metrics inside a research workspace.',
+          aspectRatio: '16/9',
+        },
         table: {
           headers: ['Metric', 'What It Tells You', 'Beginner Target Benchmark'],
           rows: [
@@ -353,8 +365,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 14, 2026',
     updatedAt: 'October 15, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/content_strategy_planner_1792227058615.jpg',
-    altText: 'Editorial flatlay of structured content planning blueprint with checklists and article outline',
+    heroImage: '/images/on-page-seo-checklist.jpg',
+    altText: 'Computer monitor displaying on-page SEO content analysis, heading hierarchy validation, and meta tag checklist',
     featured: false,
     popular: true,
     tableOfContents: [
@@ -410,6 +422,12 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Headings provide structural scaffolding for both readers and search bots. Never skip heading levels for visual styling; use CSS for visual appearance and semantic tags for document structure.',
         ],
+        image: {
+          src: '/images/on-page-seo-checklist.jpg',
+          alt: 'Webpage on-page SEO content inspection and heading structure hierarchy checklist',
+          caption: 'Figure 1: Auditing heading tags, URL structure, and meta descriptions for on-page SEO.',
+          aspectRatio: '16/9',
+        },
         list: {
           type: 'bullet',
           items: [
@@ -504,8 +522,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 13, 2026',
     updatedAt: 'October 15, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/website_performance_speed_1792227060088.jpg',
-    altText: 'Technical website performance audit interface on laptop showing Core Web Vitals diagnostics',
+    heroImage: '/images/technical-seo-guide.jpg',
+    altText: 'Technical diagram showing website architecture, XML sitemap structure, and search engine crawler indexing pathways',
     featured: false,
     popular: true,
     tableOfContents: [
@@ -581,6 +599,12 @@ export const ARTICLES: Article[] = [
           'Crawl depth refers to the number of clicks required to reach an article from the homepage. A flat website architecture ensures that critical content is never buried five or six levels deep.',
           'Organize your blog into clear category hubs, provide breadcrumbs on article pages, and ensure your pagination or archive lists allow search bots to traverse past publications effortlessly.',
         ],
+        image: {
+          src: '/images/technical-seo-guide.jpg',
+          alt: 'Isometric website crawl architecture and XML sitemap indexing diagram',
+          caption: 'Figure 1: Full-stack crawlability diagram showing sitemap discovery and crawler bot traversal.',
+          aspectRatio: '16/9',
+        },
       },
       {
         id: 'structured-data-json-ld',
@@ -642,8 +666,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 12, 2026',
     updatedAt: 'October 15, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/growth_editorial_hero_1792227058531.jpg',
-    altText: 'Author writing high-quality editorial draft with notebook and laptop displaying content outline',
+    heroImage: '/images/seo-friendly-blog-writing.jpg',
+    altText: 'Content writer working on a laptop with an open legal pad containing a blog outline and storytelling notes',
     featured: false,
     popular: false,
     tableOfContents: [
@@ -691,6 +715,12 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Never begin typing an article from a blank screen. Spend twenty minutes preparing a structured outline based on the questions prospective readers actually ask.',
         ],
+        image: {
+          src: '/images/seo-friendly-blog-writing.jpg',
+          alt: 'Writer workspace with notebook outlining blog structure and search intent topics',
+          caption: 'Figure 1: Structuring an editorial outline with intentional heading hierarchy and reader-focused takeaways.',
+          aspectRatio: '16/9',
+        },
         list: {
           type: 'bullet',
           items: [
@@ -761,7 +791,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 11, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/content_strategy_planner_1792227058615.jpg',
+    heroImage: '/images/content-marketing-strategy.jpg',
     altText: 'Flatlay blueprint of content marketing strategy showing quarterly goals, audience personas, and channels',
     featured: false,
     popular: true,
@@ -802,6 +832,12 @@ export const ARTICLES: Article[] = [
           'Modern search engines evaluate topical authority. If you publish isolated articles on random topics, search engines struggle to identify your domain area of core expertise.',
           'The Hub-and-Spoke model organizes your content around defined core pillars:',
         ],
+        image: {
+          src: '/images/content-marketing-strategy.jpg',
+          alt: 'Content marketing strategy blueprint and topic cluster calendar',
+          caption: 'Figure 1: Topic cluster blueprint mapping overarching hub pillars to focused spoke articles.',
+          aspectRatio: '16/9',
+        },
         list: {
           type: 'bullet',
           items: [
@@ -888,8 +924,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 10, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/seo_analytics_desk_1792227058801.jpg',
-    altText: 'Desk with monitor displaying website link network diagram and search ranking statistics',
+    heroImage: '/images/internal-linking-best-practices.jpg',
+    altText: 'Architectural network diagram illustrating internal linking clusters, website nodes, and PageRank distribution',
     featured: false,
     popular: false,
     tableOfContents: [
@@ -928,6 +964,12 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Every internal link you insert performs three distinct duties simultaneously:',
         ],
+        image: {
+          src: '/images/internal-linking-best-practices.jpg',
+          alt: 'Internal linking architecture network diagram showing topic clusters and PageRank flow',
+          caption: 'Figure 1: Internal link network diagram demonstrating equity flow from main domain to topic clusters.',
+          aspectRatio: '16/9',
+        },
         list: {
           type: 'bullet',
           items: [
@@ -1015,8 +1057,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 09, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/website_performance_speed_1792227060088.jpg',
-    altText: 'High-performance laptop showing green Core Web Vitals scores and speed index audit',
+    heroImage: '/images/website-speed-core-web-vitals.jpg',
+    altText: 'Modern laptop showing Core Web Vitals speed indicators, LCP metrics, and site performance diagnostics',
     featured: false,
     popular: true,
     tableOfContents: [
@@ -1055,6 +1097,12 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Google defines three primary metrics that collectively evaluate the page experience:',
         ],
+        image: {
+          src: '/images/website-speed-core-web-vitals.jpg',
+          alt: 'Core Web Vitals performance audit scores for LCP, INP, and CLS speed metrics',
+          caption: 'Figure 1: Diagnosing Core Web Vitals thresholds and audit scores for perceived page load speed and layout stability.',
+          aspectRatio: '16/9',
+        },
         table: {
           headers: ['Metric', 'What It Evaluates', 'Good Threshold', 'Common Culprit'],
           rows: [
@@ -1150,8 +1198,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 08, 2026',
     updatedAt: 'October 13, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/growth_editorial_hero_1792227058531.jpg',
-    altText: 'Blogging workspace with leather notebook, fountain pen, and laptop open to article draft',
+    heroImage: '/images/blogging-for-beginners.jpg',
+    altText: 'Bright creative blogging workspace with a lightweight laptop, notebook filled with article ideas, and fresh coffee',
     featured: false,
     popular: false,
     tableOfContents: [
@@ -1208,6 +1256,12 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Consistency is the engine of authority. Create an editorial workflow that separates ideation from writing and editing:',
         ],
+        image: {
+          src: '/images/blogging-for-beginners.jpg',
+          alt: 'Blogging workspace setup with laptop, article drafts, and editorial calendar notebook',
+          caption: 'Figure 1: The editorial workflow separating research, content drafting, and SEO optimization into repeatable sprints.',
+          aspectRatio: '16/9',
+        },
         list: {
           type: 'ordered',
           items: [
@@ -1288,8 +1342,8 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 07, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/src/assets/images/seo_analytics_desk_1792227058801.jpg',
-    altText: 'Desk with analytics dashboards displaying search clicks, impressions, and keyword rankings',
+    heroImage: '/images/measure-seo-performance.jpg',
+    altText: 'Desk monitor showing Google Search Console reporting dashboard with organic clicks and impressions',
     featured: false,
     popular: true,
     tableOfContents: [
@@ -1328,6 +1382,12 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Inside Google Search Console Performance tab, you will find four interconnected metrics that tell the complete story of your organic reach:',
         ],
+        image: {
+          src: '/images/measure-seo-performance.jpg',
+          alt: 'Google Search Console organic performance graph showing click trends and impression metrics',
+          caption: 'Figure 1: Google Search Console performance reporting dashboard tracking organic search clicks and impressions.',
+          aspectRatio: '16/9',
+        },
         table: {
           headers: ['Metric', 'Definition', 'How to Interpret'],
           rows: [

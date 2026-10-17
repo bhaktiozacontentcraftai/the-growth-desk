@@ -19,6 +19,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
       description: 'Production-ready, SEO-optimized editorial publication featuring in-depth guides on SEO, digital marketing, content strategy, and online business growth for creators and small businesses.',
       canonicalPath: '/',
       ogType: 'website',
+      image: '/images/hero-growth-desk.jpg',
     });
   }, []);
 
@@ -60,6 +61,38 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
           >
             How to Deploy on Vercel
           </button>
+        </div>
+      </section>
+
+      {/* Editorial Wide Hero Image */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative aspect-16/7 sm:aspect-21/9 w-full overflow-hidden rounded-2xl border border-stone-200/90 shadow-sm bg-stone-100 group">
+          <img
+            src="/images/hero-growth-desk.jpg"
+            alt="The Growth Desk workspace with search growth analytics, editorial notebooks, and digital marketing tools"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-101"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-stone-950/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-8 sm:right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3 text-white">
+            <div className="space-y-1">
+              <span className="text-[11px] font-mono tracking-widest uppercase text-stone-300 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block" />
+                Editorial Field Guide & Frameworks
+              </span>
+              <p className="font-serif text-lg sm:text-2xl font-bold tracking-tight text-white drop-shadow-sm">
+                Mastering the Art & Science of Modern Search Acquisition
+              </p>
+            </div>
+            <Link
+              href="/blog/seo-for-beginners/"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold bg-white/95 hover:bg-white text-stone-900 px-4 py-2 rounded-lg transition-colors shadow-sm shrink-0 backdrop-blur-xs"
+            >
+              <span>Start With Chapter 1</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
 

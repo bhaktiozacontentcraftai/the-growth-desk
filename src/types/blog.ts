@@ -38,12 +38,20 @@ export interface ArticleCallout {
   content?: string;
 }
 
+export interface ArticleImage {
+  src: string;
+  alt: string;
+  caption?: string;
+  aspectRatio?: '16/9' | '4/3' | '16/10';
+}
+
 export interface ArticleSection {
   id: string;
   heading?: string;
   level?: 2 | 3;
   paragraphs: string[];
   callout?: ArticleCallout;
+  image?: ArticleImage;
   list?: {
     type: 'bullet' | 'ordered';
     items: { boldText?: string; text: string }[];

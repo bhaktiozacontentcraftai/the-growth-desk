@@ -7,6 +7,7 @@ export interface SEOConfig {
   ogType?: 'website' | 'article';
   article?: Article;
   breadcrumbs?: { name: string; path: string }[];
+  image?: string;
 }
 
 export const getSiteUrl = (): string => {
@@ -76,13 +77,11 @@ export const updatePageSEO = (config: SEOConfig) => {
   setMeta('name', 'twitter:title', fullTitle);
   setMeta('name', 'twitter:description', config.description);
 
-  if (config.article?.heroImage) {
-    const imageUrl = config.article.heroImage.startsWith('http')
-      ? config.article.heroImage
-      : `${siteUrl}${config.article.heroImage}`;
-    setMeta('property', 'og:image', imageUrl);
-    setMeta('name', 'twitter:image', imageUrl);
-  }
+  // Dynamic OpenGraph and Twitter Image
+  const rawImage = config.article?.heroImage || config.image || '/images/hero-growth-desk.jpg';
+  const fullImageUrl = rawImage.startsWith('http') ? rawImage : `${siteUrl}${rawImage}`;
+  setMeta('property', 'og:image', fullImageUrl);
+  setMeta('name', 'twitter:image', fullImageUrl);
 
   // 5. JSON-LD Dynamic Injection
   updateJsonLd(config, siteUrl, canonicalUrl);
