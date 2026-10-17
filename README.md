@@ -36,13 +36,12 @@ git add .
 git commit -m "feat: complete SEO-optimized blog website for The Growth Desk"
 ```
 
-### Step 2: Create a New GitHub Repository & Push
-1. Go to [github.com/new](https://github.com/new) and create a new repository named `the-growth-desk`.
-2. Link your local repo and push to the `main` branch:
+### Step 2: Push to Your Existing GitHub Repository
+Link your local repository to your GitHub repository and push to the `main` branch:
 
 ```bash
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/the-growth-desk.git
+git remote add origin https://github.com/bhaktiozacontentcraftai/the-growth-desk.git
 git push -u origin main
 ```
 

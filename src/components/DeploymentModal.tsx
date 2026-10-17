@@ -25,8 +25,8 @@ export const DeploymentModal: React.FC<DeploymentModalProps> = ({ isOpen, onClos
     },
     {
       title: '2. Push to GitHub',
-      desc: 'Create a new repository on GitHub (e.g. "the-growth-desk") and run:',
-      command: `git branch -M main\ngit remote add origin https://github.com/YOUR_USERNAME/the-growth-desk.git\ngit push -u origin main`,
+      desc: 'Connect your local repository to your GitHub repository and push:',
+      command: `git branch -M main\ngit remote add origin https://github.com/bhaktiozacontentcraftai/the-growth-desk.git\ngit push -u origin main`,
     },
     {
       title: '3. Import Repository into Vercel',
