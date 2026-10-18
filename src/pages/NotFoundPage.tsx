@@ -9,7 +9,7 @@ export const NotFoundPage: React.FC = () => {
     updatePageSEO({
       title: 'Page Not Found (404) — The Growth Desk',
       description: 'The requested page or guide could not be located. Explore our core search engine optimization, content marketing, and technical SEO guides from the homepage.',
-      canonicalPath: '/404',
+      noindex: true,
       ogType: 'website',
     });
   }, []);

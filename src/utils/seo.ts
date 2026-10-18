@@ -8,12 +8,14 @@ export interface SEOConfig {
   article?: Article;
   breadcrumbs?: { name: string; path: string }[];
   image?: string;
+  noindex?: boolean;
+  robots?: string;
 }
 
 export const getSiteUrl = (): string => {
   if (typeof window !== 'undefined') {
     // If environment variable is set for production
-    if (import.meta.env.VITE_SITE_URL) {
+    if (typeof import.meta !== 'undefined' && import.meta.env?.VITE_SITE_URL) {
       return (import.meta.env.VITE_SITE_URL as string).replace(/\/$/, '');
     }
     // AI Studio Dev URL or local origin
@@ -48,26 +50,49 @@ export const updatePageSEO = (config: SEOConfig) => {
   }
   descMeta.setAttribute('content', config.description);
 
-  // 3. Canonical link (prevent duplicate tags)
-  const canonicalUrl = config.canonicalPath
-    ? `${siteUrl}${config.canonicalPath.startsWith('/') ? '' : '/'}${config.canonicalPath}`
-    : `${siteUrl}${window.location.pathname}`;
-
-  const canonicalLinks = document.querySelectorAll('link[rel="canonical"]');
-  let canonicalLink: HTMLLinkElement;
-  if (canonicalLinks.length > 0) {
-    canonicalLink = canonicalLinks[0] as HTMLLinkElement;
-    for (let i = 1; i < canonicalLinks.length; i++) {
-      canonicalLinks[i].remove();
+  // 3. Robots meta directive (prevent duplicate tags; support noindex and restore on valid pages)
+  const robotsMetas = document.querySelectorAll('meta[name="robots"]');
+  let robotsMeta: HTMLMetaElement;
+  if (robotsMetas.length > 0) {
+    robotsMeta = robotsMetas[0] as HTMLMetaElement;
+    for (let i = 1; i < robotsMetas.length; i++) {
+      robotsMetas[i].remove();
     }
   } else {
-    canonicalLink = document.createElement('link');
-    canonicalLink.setAttribute('rel', 'canonical');
-    document.head.appendChild(canonicalLink);
+    robotsMeta = document.createElement('meta');
+    robotsMeta.setAttribute('name', 'robots');
+    document.head.appendChild(robotsMeta);
   }
-  canonicalLink.setAttribute('href', canonicalUrl);
 
-  // 4. OpenGraph Tags (prevent duplicate tags)
+  const defaultRobots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  const robotsContent = config.robots || (config.noindex ? 'noindex, follow' : defaultRobots);
+  robotsMeta.setAttribute('content', robotsContent);
+
+  // 4. Canonical link (prevent duplicate tags; remove on 404 so /404 is never declared canonical)
+  const canonicalLinks = document.querySelectorAll('link[rel="canonical"]');
+  let canonicalUrl = '';
+
+  if (config.canonicalPath) {
+    canonicalUrl = `${siteUrl}${config.canonicalPath.startsWith('/') ? '' : '/'}${config.canonicalPath}`;
+    let canonicalLink: HTMLLinkElement;
+    if (canonicalLinks.length > 0) {
+      canonicalLink = canonicalLinks[0] as HTMLLinkElement;
+      for (let i = 1; i < canonicalLinks.length; i++) {
+        canonicalLinks[i].remove();
+      }
+    } else {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      canonicalLink.setAttribute('id', 'canonical-tag');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', canonicalUrl);
+  } else {
+    // A 404 or missing page must never declare a canonical URL
+    canonicalLinks.forEach((link) => link.remove());
+  }
+
+  // 5. OpenGraph Tags (prevent duplicate tags)
   const setMeta = (attr: 'name' | 'property', key: string, value: string) => {
     const elements = document.querySelectorAll(`meta[${attr}="${key}"]`);
     let el: HTMLMetaElement;
@@ -86,7 +111,12 @@ export const updatePageSEO = (config: SEOConfig) => {
 
   setMeta('property', 'og:title', fullTitle);
   setMeta('property', 'og:description', config.description);
-  setMeta('property', 'og:url', canonicalUrl);
+  if (canonicalUrl) {
+    setMeta('property', 'og:url', canonicalUrl);
+  } else {
+    const ogUrls = document.querySelectorAll('meta[property="og:url"]');
+    ogUrls.forEach((el) => el.remove());
+  }
   setMeta('property', 'og:type', config.ogType || 'website');
   setMeta('property', 'og:site_name', 'The Growth Desk');
 
@@ -101,7 +131,7 @@ export const updatePageSEO = (config: SEOConfig) => {
   setMeta('property', 'og:image', fullImageUrl);
   setMeta('name', 'twitter:image', fullImageUrl);
 
-  // 5. JSON-LD Dynamic Injection
+  // 6. JSON-LD Dynamic Injection
   updateJsonLd(config, siteUrl, canonicalUrl);
 };
 
