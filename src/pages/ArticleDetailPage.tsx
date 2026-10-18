@@ -25,6 +25,40 @@ interface ArticleDetailPageProps {
   slug: string;
 }
 
+const renderContentWithLinks = (text: string): React.ReactNode => {
+  if (!text || typeof text !== 'string') return text;
+  if (!text.includes('[') || !text.includes('](')) return text;
+
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const elements: React.ReactNode[] = [];
+  let lastIdx = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIdx) {
+      elements.push(text.slice(lastIdx, match.index));
+    }
+    const label = match[1];
+    const href = match[2];
+    elements.push(
+      <Link
+        key={`${href}-${match.index}`}
+        href={href}
+        className="font-medium text-stone-900 underline decoration-stone-400 underline-offset-3 hover:text-stone-950 hover:decoration-stone-900 transition-colors"
+      >
+        {label}
+      </Link>
+    );
+    lastIdx = match.index + match[0].length;
+  }
+
+  if (lastIdx < text.length) {
+    elements.push(text.slice(lastIdx));
+  }
+
+  return elements;
+};
+
 export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) => {
   const [readingProgress, setReadingProgress] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -170,11 +204,14 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
               <img
                 src={article.heroImage}
                 alt={article.altText}
+                width={1200}
+                height={675}
                 referrerPolicy="no-referrer"
                 onError={() => setImageError(true)}
                 className="w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"
+                decoding="async"
               />
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-stone-100 text-stone-400">
@@ -199,7 +236,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
                   key={index}
                   className={index === 0 ? 'editorial-dropcap text-base sm:text-lg leading-relaxed' : 'text-base leading-relaxed'}
                 >
-                  {paragraph}
+                  {renderContentWithLinks(paragraph)}
                 </p>
               ))}
             </section>
@@ -246,7 +283,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
 
                   {section.paragraphs.map((para, pIdx) => (
                     <p key={pIdx} className="text-stone-800 text-sm sm:text-base leading-relaxed">
-                      {para}
+                      {renderContentWithLinks(para)}
                     </p>
                   ))}
 
@@ -257,8 +294,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
                         <img
                           src={section.image.src}
                           alt={section.image.alt}
+                          width={1200}
+                          height={675}
                           className="w-full h-full object-cover"
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       {section.image.caption && (
@@ -278,7 +318,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
                       </h4>
                       {section.callout.content && (
                         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                          {section.callout.content}
+                          {renderContentWithLinks(section.callout.content)}
                         </p>
                       )}
                       {section.callout.items && (
@@ -286,7 +326,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
                           {section.callout.items.map((item, itemIdx) => (
                             <li key={itemIdx} className="flex items-start gap-2">
                               <Check className="w-3.5 h-3.5 text-stone-800 shrink-0 mt-0.5" />
-                              <span>{item}</span>
+                              <span>{renderContentWithLinks(item)}</span>
                             </li>
                           ))}
                         </ul>
@@ -302,7 +342,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
                           {section.list.items.map((li, lIdx) => (
                             <li key={lIdx}>
                               {li.boldText && <strong className="font-semibold text-stone-950">{li.boldText}</strong>}
-                              <span>{li.text}</span>
+                              <span>{renderContentWithLinks(li.text)}</span>
                             </li>
                           ))}
                         </ol>
@@ -313,7 +353,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
                               <span className="w-1.5 h-1.5 rounded-full bg-stone-700 mt-2 shrink-0" />
                               <div>
                                 {li.boldText && <strong className="font-semibold text-stone-950">{li.boldText}</strong>}
-                                <span>{li.text}</span>
+                                <span>{renderContentWithLinks(li.text)}</span>
                               </div>
                             </li>
                           ))}

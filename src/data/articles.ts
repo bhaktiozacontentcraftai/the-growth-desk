@@ -24,7 +24,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 15, 2026',
     updatedAt: 'October 16, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/seo-for-beginners.jpg',
+    heroImage: '/images/seo-for-beginners.webp',
     altText: 'Clean minimalist modern editorial workspace with laptop displaying search traffic growth charts and open notebook',
     featured: true,
     popular: true,
@@ -60,7 +60,7 @@ export const ARTICLES: Article[] = [
           'The entire discovery and delivery lifecycle unfolds across three key phases:',
         ],
         image: {
-          src: '/images/seo-for-beginners.jpg',
+          src: '/images/seo-for-beginners.webp',
           alt: 'Search engine crawling, indexing, and ranking pipeline diagram',
           caption: 'Figure 1: The three-stage discovery pipeline: crawling web links, indexing parsed content, and ranking search queries.',
           aspectRatio: '16/9',
@@ -123,7 +123,7 @@ export const ARTICLES: Article[] = [
         level: 3,
         paragraphs: [
           'Keyword research is the compass of your content strategy. Rather than guessing what your prospective readers care about, keyword research uncovers actual search volume, competitive difficulty, and related queries.',
-          'For a deep dive on identifying low-competition, high-intent phrases, review our dedicated companion guide on keyword discovery.',
+          'For a deep dive on identifying low-competition, high-intent phrases, review our dedicated [step-by-step keyword research framework](/blog/keyword-research-guide/).',
         ],
         callout: {
           type: 'framework',
@@ -137,7 +137,7 @@ export const ARTICLES: Article[] = [
         level: 3,
         paragraphs: [
           'Great SEO content is organized so both humans and search algorithms can scan it effortlessly. Use a single descriptive H1 heading, follow logical H2 and H3 subheadings, write descriptive image alt text, and provide upfront answers before diving into nuanced details.',
-          'Refer to our practical checklist on on-page SEO optimization for a complete step-by-step pre-publishing review.',
+          'Refer to our [practical on-page SEO checklist](/blog/on-page-seo-checklist/) for a complete step-by-step pre-publishing review.',
         ],
       },
       {
@@ -146,7 +146,7 @@ export const ARTICLES: Article[] = [
         level: 3,
         paragraphs: [
           'Technical SEO ensures your website is easily accessible to crawlers. A website that is slow, delivers 404 errors, or blocks bots via incorrect robots.txt directives cannot rank reliably, regardless of how insightful the writing may be.',
-          'Ensure your website has an automated XML sitemap, clean robots.txt directives, self-referential canonical tags, and fast loading speeds that pass Core Web Vitals thresholds.',
+          'Ensure your website has an automated XML sitemap, clean robots.txt directives, and self-referential canonical tags as outlined in our [technical SEO guide](/blog/technical-seo-guide/).',
         ],
       },
       {
@@ -219,7 +219,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 14, 2026',
     updatedAt: 'October 16, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/keyword-research-guide.jpg',
+    heroImage: '/images/keyword-research-guide.webp',
     altText: 'Desk workstation with monitor displaying search keyword analysis, organic traffic metrics, and keyword position rankings',
     featured: false,
     popular: true,
@@ -248,7 +248,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Writing without keyword research is like sailing without a navigation chart. You might produce an exceptional piece of prose, but if nobody searches for that phrasing, your organic reach will remain near zero.',
-          'Keyword research bridges the gap between what you want to say and the exact vocabulary your prospective audience uses when seeking solutions.',
+          'Keyword research bridges the gap between what you want to say and the exact vocabulary your prospective audience uses when seeking solutions. As covered in our [foundational guide on SEO for beginners](/blog/seo-for-beginners/), aligning with real searcher vocabulary is the first prerequisite for organic discovery.',
         ],
       },
       {
@@ -259,7 +259,7 @@ export const ARTICLES: Article[] = [
           'Not all keywords are created equal. When evaluating potential topics for your editorial calendar, assess these three essential dimensions:',
         ],
         image: {
-          src: '/images/keyword-research-guide.jpg',
+          src: '/images/keyword-research-guide.webp',
           alt: 'Keyword research analytics dashboard showing search volume, keyword difficulty, and intent classification',
           caption: 'Figure 1: Evaluating keyword volume, competition density, and user intent metrics inside a research workspace.',
           aspectRatio: '16/9',
@@ -307,7 +307,7 @@ export const ARTICLES: Article[] = [
         heading: 'How to Manually Analyze the Search Results (SERP)',
         level: 3,
         paragraphs: [
-          'Before writing a single sentence, search your target phrase in an incognito browser window and examine the top 5 results. Ask yourself:',
+          'Before writing a single sentence, search your target phrase in an incognito browser window and examine the top 5 results. Match your structure to user expectations using our guide on [how to write SEO-friendly blog posts](/blog/seo-friendly-blog-writing/). Ask yourself:',
         ],
         list: {
           type: 'bullet',
@@ -329,7 +329,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Maintain a simple spreadsheet mapping each target keyword to a specific planned URL. This prevents "keyword cannibalization," which occurs when two pages on your own website compete against each other for the exact same query, dividing your ranking signals.',
-          'Pair each chosen keyword with a clear on-page optimization checklist and an internal linking structure connecting your articles into cohesive topic clusters.',
+          'Pair each chosen keyword with a clear [on-page SEO checklist](/blog/on-page-seo-checklist/) and a purposeful [internal linking strategy](/blog/internal-linking-best-practices/) connecting your articles into cohesive topic clusters.',
         ],
       },
     ],
@@ -366,7 +366,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 14, 2026',
     updatedAt: 'October 15, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/on-page-seo-checklist.jpg',
+    heroImage: '/images/on-page-seo-checklist.webp',
     altText: 'Computer monitor displaying on-page SEO content analysis, heading hierarchy validation, and meta tag checklist',
     featured: false,
     popular: true,
@@ -397,7 +397,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'On-page SEO is the art and science of aligning your visible content, semantic HTML tags, and visual media with the specific expectations of search engine algorithms and human visitors.',
-          'Search engines look for explicit relevance signals: where your keyword appears, how logically the document is divided, how quickly the page renders, and whether visitors find the information they sought.',
+          'Search engines look for explicit relevance signals: where your keyword appears, how logically the document is divided, how quickly the page renders, and whether visitors find the information they sought. Every successful page starts with an analytical [keyword research process](/blog/keyword-research-guide/) to validate user intent.',
         ],
       },
       {
@@ -421,10 +421,10 @@ export const ARTICLES: Article[] = [
         heading: '2. Heading Hierarchy (H1, H2, H3)',
         level: 2,
         paragraphs: [
-          'Headings provide structural scaffolding for both readers and search bots. Never skip heading levels for visual styling; use CSS for visual appearance and semantic tags for document structure.',
+          'Headings provide structural scaffolding for both readers and search bots. Never skip heading levels for visual styling; use CSS for visual appearance and semantic tags for document structure. For deeper crawlability and sitemap principles, explore our [technical SEO guide](/blog/technical-seo-guide/).',
         ],
         image: {
-          src: '/images/on-page-seo-checklist.jpg',
+          src: '/images/on-page-seo-checklist.webp',
           alt: 'Webpage on-page SEO content inspection and heading structure hierarchy checklist',
           caption: 'Figure 1: Auditing heading tags, URL structure, and meta descriptions for on-page SEO.',
           aspectRatio: '16/9',
@@ -452,7 +452,7 @@ export const ARTICLES: Article[] = [
         heading: '4. Image Optimization and Alt Text',
         level: 2,
         paragraphs: [
-          'Images enhance reader comprehension, but unoptimized media can severely drag down page speed. Always compress images, specify modern formats like WebP or responsive JPGs, and include descriptive alternative text (alt text).',
+          'Images enhance reader comprehension, but unoptimized media can severely drag down page speed. Always compress images, specify modern formats like WebP, and audit rendering performance using our [Core Web Vitals speed optimization guide](/blog/website-speed-core-web-vitals/).',
           'Alt text serves two critical purposes: it ensures accessibility for visually impaired readers using screen readers, and it helps search engine image bots interpret visual context.',
         ],
       },
@@ -462,7 +462,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Never leave an article isolated. Link out contextually to 2 to 5 relevant articles within your own domain to distribute page authority and guide readers to next steps.',
-          'For detailed guidance on anchor text strategies and topic cluster design, explore our comprehensive guide on internal linking best practices.',
+          'For detailed guidance on anchor text strategies and topic cluster design, explore our comprehensive guide on [internal linking best practices](/blog/internal-linking-best-practices/).',
         ],
       },
       {
@@ -523,7 +523,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 13, 2026',
     updatedAt: 'October 15, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/technical-seo-guide.jpg',
+    heroImage: '/images/technical-seo-guide.webp',
     altText: 'Technical diagram showing website architecture, XML sitemap structure, and search engine crawler indexing pathways',
     featured: false,
     popular: true,
@@ -554,7 +554,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Search engines have finite crawling resources (often called crawl budget). When bots waste time navigating broken redirect chains, slow server responses, or duplicate URL variations, valuable new articles remain undiscovered.',
-          'Technical optimization creates an unobstructed runway for your content to be indexed swiftly and evaluated fairly on its merit.',
+          'Technical optimization creates an unobstructed runway for your content to be indexed swiftly and evaluated fairly on its merit. Fast rendering speeds and layout stability also play a critical role; audit your site using our [website speed and Core Web Vitals optimization guide](/blog/website-speed-core-web-vitals/).',
         ],
       },
       {
@@ -589,7 +589,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Websites frequently generate multiple URLs for the same underlying content—for instance, with tracking parameters (?utm_source=twitter), trailing slash differences, or pagination variations.',
-          'A canonical tag (<link rel="canonical" href="..." />) tells search engines which URL version is the master copy. Every public page on your site should have a self-referential canonical tag pointing to its clean, standardized URL.',
+          'A canonical tag (<link rel="canonical" href="..." />) tells search engines which URL version is the master copy. Every public page on your site should have a self-referential canonical tag pointing to its clean, standardized URL, paired with the on-page rules in our [on-page SEO checklist](/blog/on-page-seo-checklist/).',
         ],
       },
       {
@@ -598,10 +598,10 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Crawl depth refers to the number of clicks required to reach an article from the homepage. A flat website architecture ensures that critical content is never buried five or six levels deep.',
-          'Organize your blog into clear category hubs, provide breadcrumbs on article pages, and ensure your pagination or archive lists allow search bots to traverse past publications effortlessly.',
+          'Organize your blog into clear category hubs, provide breadcrumbs on article pages, and ensure your pagination or archive lists allow search bots to traverse past publications effortlessly. Supporting this architecture with [strategic internal linking clusters](/blog/internal-linking-best-practices/) ensures link equity flows efficiently from popular guides to deeper posts.',
         ],
         image: {
-          src: '/images/technical-seo-guide.jpg',
+          src: '/images/technical-seo-guide.webp',
           alt: 'Isometric website crawl architecture and XML sitemap indexing diagram',
           caption: 'Figure 1: Full-stack crawlability diagram showing sitemap discovery and crawler bot traversal.',
           aspectRatio: '16/9',
@@ -667,7 +667,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 12, 2026',
     updatedAt: 'October 15, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/seo-friendly-blog-writing.jpg',
+    heroImage: '/images/seo-friendly-blog-writing.webp',
     altText: 'Content writer working on a laptop with an open legal pad containing a blog outline and storytelling notes',
     featured: false,
     popular: false,
@@ -697,7 +697,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Search engines measure post-click user signals: dwell time, scroll depth, and whether a user returns to search results to click another listing (known as pogo-sticking).',
-          'If an article ranks #1 but is stuffed with repetitive keyword variations and fluff, readers bounce within five seconds. Algorithms quickly detect this drop in user satisfaction and downgrade the page.',
+          'If an article ranks #1 but is stuffed with repetitive keyword variations and fluff, readers bounce within five seconds. Algorithms quickly detect this drop in user satisfaction and downgrade the page. Building genuine editorial authority starts with the fundamental workflow taught in our [blogging for beginners guide](/blog/blogging-for-beginners/).',
         ],
       },
       {
@@ -714,10 +714,10 @@ export const ARTICLES: Article[] = [
         heading: '2. Outlining for Search Intent and Clarity',
         level: 2,
         paragraphs: [
-          'Never begin typing an article from a blank screen. Spend twenty minutes preparing a structured outline based on the questions prospective readers actually ask.',
+          'Never begin typing an article from a blank screen. Spend twenty minutes preparing a structured outline based on the questions prospective readers actually ask. Uncover those exact user queries by following our [step-by-step keyword research process](/blog/keyword-research-guide/) before writing.',
         ],
         image: {
-          src: '/images/seo-friendly-blog-writing.jpg',
+          src: '/images/seo-friendly-blog-writing.webp',
           alt: 'Writer workspace with notebook outlining blog structure and search intent topics',
           caption: 'Figure 1: Structuring an editorial outline with intentional heading hierarchy and reader-focused takeaways.',
           aspectRatio: '16/9',
@@ -755,7 +755,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'A weak conclusion abruptly stops the conversation. A strong conclusion synthesizes the core lesson and points the reader toward their next actionable step.',
-          'Encourage readers to explore related articles on your site or sign up for your newsletter to continue their learning journey.',
+          'Encourage readers to explore related articles on your site or sign up for your newsletter to continue their learning journey. Connecting companion guides with [natural, descriptive internal links](/blog/internal-linking-best-practices/) keeps readers immersed while distributing ranking authority across your site.',
         ],
       },
     ],
@@ -792,7 +792,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 11, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/content-marketing-strategy.jpg',
+    heroImage: '/images/content-marketing-strategy.webp',
     altText: 'Flatlay blueprint of content marketing strategy showing quarterly goals, audience personas, and channels',
     featured: false,
     popular: true,
@@ -830,11 +830,11 @@ export const ARTICLES: Article[] = [
         heading: '1. The Hub-and-Spoke (Topic Cluster) Model',
         level: 2,
         paragraphs: [
-          'Modern search engines evaluate topical authority. If you publish isolated articles on random topics, search engines struggle to identify your domain area of core expertise.',
+          'Modern search engines evaluate topical authority. If you publish isolated articles on random topics, search engines struggle to identify your domain area of core expertise. Learn how to draft individual cluster articles using our guide to [writing SEO-friendly blog posts](/blog/seo-friendly-blog-writing/).',
           'The Hub-and-Spoke model organizes your content around defined core pillars:',
         ],
         image: {
-          src: '/images/content-marketing-strategy.jpg',
+          src: '/images/content-marketing-strategy.webp',
           alt: 'Content marketing strategy blueprint and topic cluster calendar',
           caption: 'Figure 1: Topic cluster blueprint mapping overarching hub pillars to focused spoke articles.',
           aspectRatio: '16/9',
@@ -853,7 +853,7 @@ export const ARTICLES: Article[] = [
         heading: '2. Mapping Content Across the Customer Journey',
         level: 2,
         paragraphs: [
-          'A balanced content strategy guides prospective clients smoothly through three stages of awareness:',
+          'A balanced content strategy guides prospective clients smoothly through three stages of awareness. Aligning your editorial calendar with real buyer intent starts with [comprehensive keyword research](/blog/keyword-research-guide/) across each funnel phase:',
         ],
         table: {
           headers: ['Funnel Stage', 'Reader Mindset', 'Target Content Types'],
@@ -888,7 +888,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Vanity metrics like total page impressions can be deeply misleading. A million visits from visitors who have zero need for your services will not keep your business afloat.',
-          'Learn how to track meaningful conversions and conversion paths using our comprehensive guide on measuring SEO performance with Google Search Console and Analytics.',
+          'Learn how to track meaningful conversions and conversion paths using our comprehensive guide on [measuring SEO performance with Google Search Console](/blog/measure-seo-performance/).',
         ],
       },
     ],
@@ -925,7 +925,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 10, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/internal-linking-best-practices.jpg',
+    heroImage: '/images/internal-linking-best-practices.webp',
     altText: 'Architectural network diagram illustrating internal linking clusters, website nodes, and PageRank distribution',
     featured: false,
     popular: false,
@@ -956,7 +956,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           'Internal links matter because they help both users and search engines discover related pages, understand your overall site structure, and find contextual relationships between content. When you link relevant articles together, search engine crawlers can navigate your domain more effectively, while human readers can seamlessly explore deeper topics without hitting dead ends.',
           'An internal link is any hyperlink that connects one page on your domain to another page on the very same domain. For search engines, these links serve as roadmaps demonstrating how ideas, topics, and categories interconnect.',
-          'When you publish a new post, it initially has zero external backlinks. By linking to it from existing, contextually relevant articles on your site, you help crawlers index the page promptly and establish its place within your broader content library.',
+          'When you publish a new post, it initially has zero external backlinks. By linking to it from existing, contextually relevant articles on your site, you help crawlers index the page promptly and establish its place within your broader content library, as introduced in our [foundational guide on SEO for beginners](/blog/seo-for-beginners/).',
         ],
       },
       {
@@ -967,7 +967,7 @@ export const ARTICLES: Article[] = [
           'Every internal link you insert performs three distinct duties simultaneously:',
         ],
         image: {
-          src: '/images/internal-linking-best-practices.jpg',
+          src: '/images/internal-linking-best-practices.webp',
           alt: 'Internal linking architecture network diagram showing topic clusters and PageRank flow',
           caption: 'Figure 1: Internal link network diagram demonstrating equity flow from main domain to topic clusters.',
           aspectRatio: '16/9',
@@ -987,7 +987,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Anchor text is the visible, clickable text within a hyperlink. Generic anchors like "click here", "read more", or "source" provide zero semantic context to search engines.',
-          'Instead, use descriptive phrasing that summarizes the target destination. For example, rather than writing "to learn about technical SEO click here," write "explore our beginner-friendly technical SEO guide to resolve crawl issues."',
+          'Instead, use descriptive phrasing that summarizes the target destination. For example, rather than writing "to learn about technical SEO click here," write "[explore our beginner-friendly technical SEO guide](/blog/technical-seo-guide/) to resolve crawl issues."',
         ],
       },
       {
@@ -1004,7 +1004,7 @@ export const ARTICLES: Article[] = [
         heading: '3. Strategic Distribution of Link Equity (PageRank)',
         level: 2,
         paragraphs: [
-          'Your homepage and top-performing guides typically receive the highest number of external backlinks. You can channel this accumulated authority to lift commercial or emerging articles by linking to them from your highest-traffic pages.',
+          'Your homepage and top-performing guides typically receive the highest number of external backlinks. You can channel this accumulated authority to lift commercial or emerging articles by linking to them from your highest-traffic pages. You can track which pages pass the most search impressions in our tutorial on [how to measure SEO performance with Search Console](/blog/measure-seo-performance/).',
           'Ensure contextual links appear high within the body text where readers are most likely to click them.',
         ],
       },
@@ -1059,7 +1059,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 09, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/website-speed-core-web-vitals.jpg',
+    heroImage: '/images/website-speed-core-web-vitals.webp',
     altText: 'Modern laptop showing Core Web Vitals speed indicators, LCP metrics, and site performance diagnostics',
     featured: false,
     popular: true,
@@ -1089,7 +1089,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Website speed is a direct reflection of respect for the user time. Search engines prioritize fast sites because users are far more likely to stay, read, and convert when pages load instantaneously.',
-          'With Google mobile-first indexing, performance is evaluated primarily against mobile devices operating on cellular connections.',
+          'With Google mobile-first indexing, performance is evaluated primarily against mobile devices operating on cellular connections. Speed represents a core pillar of technical site health; pair your performance tuning with the site architecture recommendations in our [beginner-friendly technical SEO guide](/blog/technical-seo-guide/).',
         ],
       },
       {
@@ -1100,7 +1100,7 @@ export const ARTICLES: Article[] = [
           'Google defines three primary metrics that collectively evaluate the page experience:',
         ],
         image: {
-          src: '/images/website-speed-core-web-vitals.jpg',
+          src: '/images/website-speed-core-web-vitals.webp',
           alt: 'Core Web Vitals performance audit scores for LCP, INP, and CLS speed metrics',
           caption: 'Figure 1: Diagnosing Core Web Vitals thresholds and audit scores for perceived page load speed and layout stability.',
           aspectRatio: '16/9',
@@ -1145,7 +1145,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Nothing frustrates readers more than reading a sentence only to have the text suddenly jump down the screen because an image or font finished loading late. This sudden movement is measured as Cumulative Layout Shift.',
-          'Always declare explicit width and height attributes or CSS aspect-ratio properties on every image and video container. This reserves the required layout space before the image asset finishes downloading.',
+          'Always declare explicit width and height attributes or CSS aspect-ratio properties on every image and video container. This reserves the required layout space before the image asset finishes downloading, matching the standards outlined in our [on-page SEO checklist](/blog/on-page-seo-checklist/).',
         ],
       },
       {
@@ -1153,7 +1153,7 @@ export const ARTICLES: Article[] = [
         heading: 'Five High-Impact Quick Wins for Fast Pages',
         level: 2,
         paragraphs: [
-          'Implement these five performance optimizations to improve your audit scores immediately:',
+          'Implement these five performance optimizations to improve your audit scores immediately, and monitor your indexation and speed metrics using our [guide to measuring SEO performance with Search Console](/blog/measure-seo-performance/):',
         ],
         list: {
           type: 'ordered',
@@ -1200,7 +1200,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 08, 2026',
     updatedAt: 'October 13, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/blogging-for-beginners.jpg',
+    heroImage: '/images/blogging-for-beginners.webp',
     altText: 'Bright creative blogging workspace with a lightweight laptop, notebook filled with article ideas, and fresh coffee',
     featured: false,
     popular: false,
@@ -1230,7 +1230,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Social media platforms are walled gardens designed to keep users scrolling. A blog, in contrast, is an open publication accessible to the entire world through search engines.',
-          'Long-form editorial writing demonstrates depth of thinking. It builds the credibility required to land high-value consulting contracts, sell educational programs, or grow independent digital products.',
+          'Long-form editorial writing demonstrates depth of thinking. It builds the credibility required to land high-value consulting contracts, sell educational programs, or grow independent digital products. To establish early search visibility, ground your blog in our [step-by-step SEO guide for beginners](/blog/seo-for-beginners/).',
         ],
       },
       {
@@ -1256,10 +1256,10 @@ export const ARTICLES: Article[] = [
         heading: '3. Building a Repeatable Editorial Workflow',
         level: 2,
         paragraphs: [
-          'Consistency is the engine of authority. Create an editorial workflow that separates ideation from writing and editing:',
+          'Consistency is the engine of authority. Create an editorial workflow that separates ideation from writing and editing, using our proven blueprint for [writing SEO-friendly blog posts](/blog/seo-friendly-blog-writing/) that resonate with readers:',
         ],
         image: {
-          src: '/images/blogging-for-beginners.jpg',
+          src: '/images/blogging-for-beginners.webp',
           alt: 'Blogging workspace setup with laptop, article drafts, and editorial calendar notebook',
           caption: 'Figure 1: The editorial workflow separating research, content drafting, and SEO optimization into repeatable sprints.',
           aspectRatio: '16/9',
@@ -1294,7 +1294,7 @@ export const ARTICLES: Article[] = [
         heading: 'Your 7-Step Blog Launch Checklist',
         level: 2,
         paragraphs: [
-          'Before sharing your publication with the world, ensure these seven launch items are in place:',
+          'Before sharing your publication with the world, ensure these seven launch items are in place. Once published, track your organic progress using our tutorial on [measuring SEO performance with Google Search Console](/blog/measure-seo-performance/):',
         ],
         callout: {
           type: 'checklist',
@@ -1344,7 +1344,7 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 07, 2026',
     updatedAt: 'October 14, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/measure-seo-performance.jpg',
+    heroImage: '/images/measure-seo-performance.webp',
     altText: 'Desk monitor showing Google Search Console reporting dashboard with organic clicks and impressions',
     featured: false,
     popular: true,
@@ -1385,7 +1385,7 @@ export const ARTICLES: Article[] = [
           'Inside Google Search Console Performance tab, you will find four interconnected metrics that tell the complete story of your organic reach:',
         ],
         image: {
-          src: '/images/measure-seo-performance.jpg',
+          src: '/images/measure-seo-performance.webp',
           alt: 'Google Search Console organic performance graph showing click trends and impression metrics',
           caption: 'Figure 1: Google Search Console performance reporting dashboard tracking organic search clicks and impressions.',
           aspectRatio: '16/9',
@@ -1405,7 +1405,7 @@ export const ARTICLES: Article[] = [
         heading: '2. Diagnosing Indexing and Coverage Reports',
         level: 2,
         paragraphs: [
-          'Before a page can rank for a single query, it must be indexed. The Page Indexing report inside Search Console details exactly which pages Google has accepted and which have been excluded.',
+          'Before a page can rank for a single query, it must be indexed. The Page Indexing report inside Search Console details exactly which pages Google has accepted and which have been excluded. For step-by-step remediation of crawl anomalies and canonical exclusions, review our [beginner-friendly technical SEO guide](/blog/technical-seo-guide/).',
           'Common exclusion reasons you should monitor:',
         ],
         list: {
@@ -1423,7 +1423,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'One of the highest-ROI tactics in SEO is optimizing for "striking distance" keywords—queries where your article already ranks between position 8 and 20 (bottom of page 1 or top of page 2).',
-          'Because Google already views your page as relevant for these terms, small optimizations can easily push them into the top 3 positions. Look up these queries in GSC, weave the exact questions into an H2 subheading, and add a dedicated explanatory paragraph.',
+          'Because Google already views your page as relevant for these terms, small optimizations can easily push them into the top 3 positions. Pair these on-page improvements with authoritative internal links from your highest-traffic posts using our [internal linking best practices framework](/blog/internal-linking-best-practices/).',
         ],
       },
       {
@@ -1432,7 +1432,7 @@ export const ARTICLES: Article[] = [
         level: 2,
         paragraphs: [
           'Search Console tells you how visitors arrive; web analytics tells you what they do once they land. Monitor average engagement duration, scroll depth, and goal conversion events (such as newsletter signups).',
-          'If an article attracts thousands of visits but visitors leave within 10 seconds, review the search intent. The article may need clearer introductory takeaways or more prominent internal links.',
+          'If an article attracts thousands of visits but visitors leave within 10 seconds, review the search intent. Structure your layout for scannability and audience retention using the storytelling frameworks in our guide on [how to write SEO-friendly blog posts](/blog/seo-friendly-blog-writing/).',
         ],
       },
       {

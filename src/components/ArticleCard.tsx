@@ -56,10 +56,13 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, variant = 'st
             <img
               src={article.heroImage}
               alt={article.altText}
+              width={600}
+              height={450}
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
               className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
               loading="lazy"
+              decoding="async"
             />
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center p-6 bg-stone-100 text-stone-400">
@@ -98,10 +101,13 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, variant = 'st
           <img
             src={article.heroImage}
             alt={article.altText}
+            width={600}
+            height={375}
             referrerPolicy="no-referrer"
             onError={() => setImageError(true)}
             className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
             loading="lazy"
+            decoding="async"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center p-6 bg-stone-100 text-stone-400">

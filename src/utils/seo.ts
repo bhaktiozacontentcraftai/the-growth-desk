@@ -96,7 +96,7 @@ export const updatePageSEO = (config: SEOConfig) => {
   setMeta('name', 'twitter:description', config.description);
 
   // Dynamic OpenGraph and Twitter Image
-  const rawImage = config.article?.heroImage || config.image || '/images/hero-growth-desk.jpg';
+  const rawImage = config.article?.heroImage || config.image || '/images/hero-growth-desk.webp';
   const fullImageUrl = rawImage.startsWith('http') ? rawImage : `${siteUrl}${rawImage}`;
   setMeta('property', 'og:image', fullImageUrl);
   setMeta('name', 'twitter:image', fullImageUrl);

@@ -19,7 +19,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
       description: 'Practical, in-depth guides on SEO, content strategy, and website optimization to help creators, bloggers, and founders grow compounding organic search traffic.',
       canonicalPath: '/',
       ogType: 'website',
-      image: '/images/hero-growth-desk.jpg',
+      image: '/images/hero-growth-desk.webp',
     });
   }, []);
 
@@ -68,11 +68,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative aspect-16/7 sm:aspect-21/9 w-full overflow-hidden rounded-2xl border border-stone-200/90 shadow-sm bg-stone-100 group">
           <img
-            src="/images/hero-growth-desk.jpg"
+            src="/images/hero-growth-desk.webp"
             alt="The Growth Desk workspace with search growth analytics, editorial notebooks, and digital marketing tools"
+            width={1376}
+            height={768}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-101"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-stone-950/20 to-transparent pointer-events-none" />
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-8 sm:right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3 text-white">
