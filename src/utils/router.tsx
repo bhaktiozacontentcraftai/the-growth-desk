@@ -29,10 +29,14 @@ export const normalizePath = (path: string): string => {
 
 interface RouterProviderProps {
   children: ReactNode;
+  initialPath?: string;
 }
 
-export const RouterProvider: React.FC<RouterProviderProps> = ({ children }) => {
+export const RouterProvider: React.FC<RouterProviderProps> = ({ children, initialPath }) => {
   const [currentPath, setCurrentPath] = useState<string>(() => {
+    if (initialPath) {
+      return normalizePath(initialPath);
+    }
     if (typeof window !== 'undefined') {
       return normalizePath(window.location.pathname);
     }

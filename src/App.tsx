@@ -127,9 +127,13 @@ function AppContent() {
   );
 }
 
-export default function App() {
+export interface AppProps {
+  initialPath?: string;
+}
+
+export default function App({ initialPath }: AppProps = {}) {
   return (
-    <RouterProvider>
+    <RouterProvider initialPath={initialPath}>
       <AppContent />
     </RouterProvider>
   );
