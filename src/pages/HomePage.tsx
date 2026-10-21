@@ -104,10 +104,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
         <div className="flex items-center justify-between mb-6">
           <h2
             id="featured-story-heading"
-            className="text-xs uppercase font-semibold tracking-wider text-stone-500 flex items-center gap-1.5"
+            className="text-xs uppercase font-semibold tracking-wider text-stone-600 flex items-center gap-1.5"
           >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Featured Editorial Guide</span>
+            <Sparkles className="w-3.5 h-3.5 text-stone-700" />
+            <span>Chapter 1: How Do You Build Organic Traffic? Featured Lead Guide</span>
           </h2>
           <Link
             href="/blog/"
@@ -126,10 +126,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
         <div className="border-b border-stone-200 pb-3 mb-6 flex items-center justify-between">
           <h2
             id="popular-heading"
-            className="text-xs uppercase font-semibold tracking-wider text-stone-500 flex items-center gap-1.5"
+            className="text-xs uppercase font-semibold tracking-wider text-stone-600 flex items-center gap-1.5"
           >
-            <TrendingUp className="w-3.5 h-3.5" />
-            <span>Essential Reading for Beginners</span>
+            <TrendingUp className="w-3.5 h-3.5 text-stone-700" />
+            <span>Chapter 2: Essential Growth Guides: How to Start and Scale Your Blog</span>
           </h2>
         </div>
 
@@ -145,7 +145,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-10 space-y-2">
             <h2 id="categories-heading" className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
-              Browse by Growth Discipline
+              Chapter 3: Which Growth Discipline Should You Master First?
             </h2>
             <p className="text-xs sm:text-sm text-stone-600">
               Structured learning tracks covering search engine optimization, content velocity, and analytics.
@@ -190,10 +190,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
         <div className="border-b border-stone-200 pb-3 mb-8 flex items-center justify-between">
           <h2
             id="latest-heading"
-            className="text-xs uppercase font-semibold tracking-wider text-stone-500 flex items-center gap-1.5"
+            className="text-xs uppercase font-semibold tracking-wider text-stone-600 flex items-center gap-1.5"
           >
-            <Compass className="w-3.5 h-3.5" />
-            <span>Complete Publication Roster</span>
+            <Compass className="w-3.5 h-3.5 text-stone-700" />
+            <span>Chapter 4: The Growth Hacker Guide Library: All 10 Field Guides</span>
           </h2>
           <span className="text-xs font-mono text-stone-500">
             {ARTICLES.length} Guides Available
@@ -204,6 +204,49 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
           {remainingArticles.map((article) => (
             <ArticleCard key={article.id} article={article} variant="standard" />
           ))}
+        </div>
+      </section>
+
+      {/* Answer Engine Optimization (AEO / GEO) Q&A Section */}
+      <section aria-labelledby="home-faq-heading" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border border-stone-200 bg-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-xs">
+          <div className="space-y-2 border-b border-stone-100 pb-4">
+            <span className="text-[11px] font-mono uppercase tracking-widest text-stone-500">
+              Answer Engine Optimization · AEO Reference
+            </span>
+            <h2 id="home-faq-heading" className="font-serif text-xl sm:text-2xl font-bold text-stone-900">
+              Chapter 5: Frequently Asked Questions: How Does The Growth Hacker Method Work?
+            </h2>
+          </div>
+
+          <div className="space-y-5 text-stone-800 text-sm leading-relaxed divide-y divide-stone-100">
+            <div className="space-y-1.5 pt-1">
+              <h3 className="font-semibold text-stone-950 text-sm sm:text-base">
+                What is The Growth Hacker framework for organic search?
+              </h3>
+              <p className="text-stone-600 text-xs sm:text-sm">
+                The Growth Hacker framework combines editorial depth with rigorous technical SEO, disciplined keyword research, and clean on-page optimization. By creating defensible, long-form guides that directly address search intent, independent blogs build enduring organic traffic that compounds over time.
+              </p>
+            </div>
+
+            <div className="space-y-1.5 pt-4">
+              <h3 className="font-semibold text-stone-950 text-sm sm:text-base">
+                Why should founders and creators prioritize SEO over social media algorithms?
+              </h3>
+              <p className="text-stone-600 text-xs sm:text-sm">
+                Social media posts decay within hours, and algorithms can eliminate reach overnight. In contrast, articles optimized for search engines provide compounding value, capturing high-intent visitors daily for months or years after publication.
+              </p>
+            </div>
+
+            <div className="space-y-1.5 pt-4">
+              <h3 className="font-semibold text-stone-950 text-sm sm:text-base">
+                How quickly does organic SEO traffic begin to compound?
+              </h3>
+              <p className="text-stone-600 text-xs sm:text-sm">
+                New domains typically begin indexing and ranking for low-competition long-tail keywords within 6 to 12 weeks. With consistent weekly publishing and strict on-page optimization, domain authority and organic impressions typically accelerate significantly around months 4 through 6.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
