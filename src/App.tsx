@@ -28,7 +28,7 @@ function AppContent() {
   // Match routes
   let PageComponent = <NotFoundPage />;
 
-  if (normalized === '/') {
+  if (normalized === '/' || normalized === '/the-growth-idea/') {
     PageComponent = (
       <HomePage
         onOpenDeployGuide={() => setDeployGuideOpen(true)}

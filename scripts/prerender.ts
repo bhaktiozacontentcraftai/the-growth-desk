@@ -26,9 +26,19 @@ const routes: RouteSEO[] = [
   {
     path: '/',
     outputPath: 'index.html',
-    title: 'The Growth Desk — SEO, Content & Digital Marketing Guides',
+    title: 'The Growth Idea — SEO, Blogging & Digital Marketing Guides',
     description:
-      'Practical, in-depth guides on SEO, content strategy, and website optimization to help creators, bloggers, and founders grow compounding organic search traffic.',
+      'The Growth Idea: Practical, in-depth guides on SEO, blogging for beginners, and content strategy to help creators, bloggers, and founders grow compounding organic search traffic.',
+    canonicalUrl: buildCanonicalUrl('/'),
+    ogType: 'website',
+    ogImage: `${siteUrl}/images/hero-growth-desk.webp`,
+  },
+  {
+    path: '/the-growth-idea/',
+    outputPath: 'the-growth-idea/index.html',
+    title: 'The Growth Idea — SEO, Blogging & Digital Marketing Guides',
+    description:
+      'The Growth Idea: Practical, in-depth guides on SEO, blogging for beginners, and content strategy to help creators, bloggers, and founders grow compounding organic search traffic.',
     canonicalUrl: buildCanonicalUrl('/'),
     ogType: 'website',
     ogImage: `${siteUrl}/images/hero-growth-desk.webp`,

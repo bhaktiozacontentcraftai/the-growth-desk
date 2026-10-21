@@ -15,8 +15,8 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNewsletter }) => {
   useEffect(() => {
     updatePageSEO({
-      title: 'The Growth Desk — SEO, Content & Digital Marketing Guides',
-      description: 'Practical, in-depth guides on SEO, content strategy, and website optimization to help creators, bloggers, and founders grow compounding organic search traffic.',
+      title: 'The Growth Idea — SEO, Content & Digital Marketing Guides',
+      description: 'The Growth Idea: Practical, in-depth guides on SEO, blogging for beginners, and content strategy to help creators, bloggers, and founders grow compounding organic search traffic.',
       canonicalPath: '/',
       ogType: 'website',
       image: '/images/hero-growth-desk.webp',
@@ -34,17 +34,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
       {/* Editorial Header / Masthead */}
       <section className="border-b border-stone-200/80 pt-6 pb-12 text-center max-w-3xl mx-auto space-y-4 px-4">
         <div className="flex items-center justify-center gap-2 text-stone-500 text-xs font-mono uppercase tracking-widest">
-          <span>Vol. I</span>
+          <span>The Growth Idea</span>
           <span aria-hidden="true">·</span>
           <span>Independent Digital Publication</span>
           <span aria-hidden="true">·</span>
           <span>Updated Weekly</span>
         </div>
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-stone-900 leading-tight">
-          Practical strategies for organic search and digital growth.
+          The Growth Idea: Practical strategies for organic search and digital growth.
         </h1>
         <p className="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-          In-depth, beginner-friendly guides on SEO, content marketing, and site architecture for creators, bloggers, and small business founders.
+          In-depth, beginner-friendly guides on SEO, blogging for beginners, keyword research, and site architecture for creators, bloggers, and small business founders.
         </p>
 
         <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
@@ -82,17 +82,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
             <div className="space-y-1">
               <span className="text-[11px] font-mono tracking-widest uppercase text-stone-300 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block" />
-                Editorial Field Guide & Frameworks
+                The Growth Idea · Field Guide &amp; Frameworks
               </span>
               <p className="font-serif text-lg sm:text-2xl font-bold tracking-tight text-white drop-shadow-sm">
-                Mastering the Art & Science of Modern Search Acquisition
+                Mastering the Art &amp; Science of Modern Search Acquisition
               </p>
             </div>
             <Link
-              href="/blog/seo-for-beginners/"
+              href="/blog/blogging-for-beginners/"
               className="inline-flex items-center gap-1.5 text-xs font-semibold bg-white/95 hover:bg-white text-stone-900 px-4 py-2 rounded-lg transition-colors shadow-sm shrink-0 backdrop-blur-xs"
             >
-              <span>Start With Chapter 1</span>
+              <span>Start With Chapter 1: Blogging for Beginners</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

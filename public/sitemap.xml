@@ -38,10 +38,10 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Blog Articles -->
+  <!-- Blog Articles (Ordered: 1. Blogging for Beginners, 2. Keyword Research, 3. On-Page SEO Checklist, ...) -->
   <url>
-    <loc>https://thegrowthdesk.com/blog/seo-for-beginners/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://thegrowthdesk.com/blog/blogging-for-beginners/</loc>
+    <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -54,6 +54,12 @@
   <url>
     <loc>https://thegrowthdesk.com/blog/on-page-seo-checklist/</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://thegrowthdesk.com/blog/seo-for-beginners/</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -84,12 +90,6 @@
   <url>
     <loc>https://thegrowthdesk.com/blog/website-speed-core-web-vitals/</loc>
     <lastmod>2026-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://thegrowthdesk.com/blog/blogging-for-beginners/</loc>
-    <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
