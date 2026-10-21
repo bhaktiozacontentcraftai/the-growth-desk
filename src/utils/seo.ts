@@ -70,9 +70,18 @@ export const updatePageSEO = (config: SEOConfig) => {
   if (typeof window === 'undefined' || typeof document === 'undefined') return;
 
   const siteUrl = getSiteUrl();
-  const fullTitle = config.title.includes('The Growth Desk')
-    ? config.title
-    : `${config.title} — The Growth Desk`;
+
+  // If the title already includes a brand or is already optimized for standard SERP display (50-60 chars),
+  // preserve it directly. Only append " — The Growth Desk" if the title is short (<= 42 chars) and unbranded.
+  let fullTitle = config.title;
+  if (
+    !fullTitle.includes('The Growth Desk') &&
+    !fullTitle.includes('The Growth Hacker') &&
+    !fullTitle.includes('The Growth Idea') &&
+    fullTitle.length + 18 <= 60
+  ) {
+    fullTitle = `${fullTitle} — The Growth Desk`;
+  }
 
   // 1. Title
   document.title = fullTitle;

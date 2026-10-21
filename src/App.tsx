@@ -28,7 +28,7 @@ function AppContent() {
   // Match routes
   let PageComponent = <NotFoundPage />;
 
-  if (normalized === '/' || normalized === '/the-growth-idea/') {
+  if (normalized === '/' || normalized === '/the-growth-idea/' || normalized === '/the-growth-hacker/') {
     PageComponent = (
       <HomePage
         onOpenDeployGuide={() => setDeployGuideOpen(true)}
@@ -48,9 +48,15 @@ function AppContent() {
   } else if (normalized.startsWith('/blog/')) {
     // Extract slug
     const clean = normalized.replace(/^\/blog\//, '').replace(/\/$/, '');
-    const matchedArticle = ARTICLES.find((a) => a.slug === clean);
+    const slugAliasMap: Record<string, string> = {
+      'how-to-start-a-blog': 'blogging-for-beginners',
+      'keyword-research-tools': 'keyword-research-guide',
+      'on-page-seo': 'on-page-seo-checklist',
+    };
+    const resolvedSlug = slugAliasMap[clean] || clean;
+    const matchedArticle = ARTICLES.find((a) => a.slug === resolvedSlug);
     if (matchedArticle) {
-      PageComponent = <ArticleDetailPage slug={clean} />;
+      PageComponent = <ArticleDetailPage slug={matchedArticle.slug} />;
     } else {
       PageComponent = <NotFoundPage />;
     }

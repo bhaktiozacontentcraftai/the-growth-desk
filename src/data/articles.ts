@@ -8,16 +8,16 @@ export const EDITORIAL_AUTHOR = {
 };
 
 export const ARTICLES: Article[] = [
-  // 1. Blogging for Beginners: From Idea to Publication
+  // 1. How to Start a Blog: Step-by-Step Guide for Beginners
   {
     id: 'art-01',
     slug: 'blogging-for-beginners',
-    title: 'Blogging for Beginners: From Idea to Publication',
-    subtitle: 'The definitive blueprint for launching a profitable, authoritative blog in 2026 without technical overwhelm.',
+    title: 'How to Start a Blog: Step-by-Step Guide for Beginners',
+    subtitle: 'The definitive blueprint on how to start a blog in 2026, build an audience, and rank in search engines.',
     excerpt: 'Launch your blog with confidence. Step-by-step guidance on choosing a defensible niche, establishing editorial workflow, and building an audience from zero.',
-    metaDescription: 'Complete beginner guide to blogging. Learn how to choose a profitable niche, structure articles, establish an editorial calendar, and grow traffic sustainably.',
-    targetKeyword: 'blogging for beginners',
-    secondaryKeywords: ['how to start a blog', 'beginner blogging tips', 'blogging niche selection', 'how to monetize a blog'],
+    metaDescription: 'Learn how to start a blog with this complete step-by-step guide for beginners. Discover niche selection, site setup, editorial planning, and organic growth.',
+    targetKeyword: 'how to start a blog',
+    secondaryKeywords: ['blogging for beginners', 'how to start a blog from scratch', 'beginner blogging tips', 'how to monetize a blog'],
     category: 'blogging',
     categoryLabel: 'Blogging & Writing',
     readingTime: '9 min read',
@@ -152,16 +152,16 @@ export const ARTICLES: Article[] = [
     relatedSlugs: ['seo-friendly-blog-writing', 'content-marketing-strategy', 'seo-for-beginners'],
   },
 
-  // 2. Keyword Research Guide
+  // 2. Keyword Research Tools: How to Find the Right Keywords
   {
     id: 'art-02',
     slug: 'keyword-research-guide',
-    title: 'Keyword Research: How to Find the Right Keywords',
-    subtitle: 'A pragmatic framework to discover low-competition, high-intent keywords that bring qualified organic visitors to your blog.',
+    title: 'Keyword Research Tools: How to Find the Right Keywords',
+    subtitle: 'How to use keyword research tools to discover low-competition, high-intent keywords that bring qualified organic search traffic.',
     excerpt: 'Stop guessing what your audience searches for. Learn the systematic process of discovering keywords with viable search volume and realistic ranking difficulty.',
-    metaDescription: 'Discover how to find the right keywords for your blog or business. Step-by-step keyword research framework covering search intent, volume, and long-tail terms.',
-    targetKeyword: 'keyword research guide',
-    secondaryKeywords: ['how to find keywords', 'keyword search intent', 'long tail keywords', 'keyword difficulty'],
+    metaDescription: 'Discover how to use keyword research tools to find high-value, low-competition keywords. Complete step-by-step framework covering search intent and difficulty.',
+    targetKeyword: 'keyword research tools',
+    secondaryKeywords: ['keyword research guide', 'how to find keywords', 'keyword search intent', 'best keyword research tools'],
     category: 'seo',
     categoryLabel: 'Search Engine Optimization',
     readingTime: '8 min read',
@@ -299,16 +299,16 @@ export const ARTICLES: Article[] = [
     relatedSlugs: ['seo-for-beginners', 'on-page-seo-checklist', 'content-marketing-strategy'],
   },
 
-  // 3. On-Page SEO Checklist
+  // 3. On-Page SEO: Complete Checklist to Optimize Blog Posts
   {
     id: 'art-03',
     slug: 'on-page-seo-checklist',
-    title: 'On-Page SEO: A Practical Optimization Checklist',
+    title: 'On-Page SEO: Complete Checklist to Optimize Blog Posts',
     subtitle: 'A repeatable, step-by-step checklist to ensure every blog post is structured for maximum visibility, readability, and search relevance.',
     excerpt: 'Optimize titles, headings, URL slugs, image alt text, and internal links with this rigorous on-page SEO checklist before you hit publish.',
     metaDescription: 'Complete on-page SEO checklist for content creators. Optimize meta titles, heading structures, image attributes, and internal links for higher rankings.',
-    targetKeyword: 'on-page SEO checklist',
-    secondaryKeywords: ['on-page optimization', 'SEO checklist for blog posts', 'title tag optimization', 'heading tags SEO'],
+    targetKeyword: 'on-page SEO',
+    secondaryKeywords: ['on-page SEO checklist', 'on-page optimization', 'SEO checklist for blog posts', 'title tag optimization'],
     category: 'seo',
     categoryLabel: 'Search Engine Optimization',
     readingTime: '7 min read',
