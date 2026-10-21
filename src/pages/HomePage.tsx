@@ -16,7 +16,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
   useEffect(() => {
     updatePageSEO({
       title: 'The Growth Hacker — SEO & Growth Marketing Strategies',
-      description: 'The Growth Hacker: Actionable guides on SEO, blogging, keyword research, and content marketing strategy to build authority and grow organic search traffic.',
+      description: 'Grow organic traffic with The Growth Hacker. Explore proven SEO playbooks, beginner blogging guides, and content marketing strategies to rank higher today.',
       canonicalPath: '/',
       ogType: 'website',
       image: '/images/hero-growth-desk.webp',
