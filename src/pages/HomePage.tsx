@@ -19,7 +19,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
       description: 'Grow organic traffic with The Growth Hacker. Explore proven SEO playbooks, beginner blogging guides, and content marketing strategies to rank higher today.',
       canonicalPath: '/',
       ogType: 'website',
-      image: '/images/hero-growth-desk.webp',
+      image: '/images/growth-hacker-hero.webp',
     });
   }, []);
 
@@ -65,17 +65,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
       </section>
 
       {/* Editorial Wide Hero Image */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2">
         <div className="relative aspect-16/7 sm:aspect-21/9 w-full overflow-hidden rounded-2xl border border-stone-200/90 shadow-sm bg-stone-100 group">
           <img
-            src="/images/hero-growth-desk.webp"
-            alt="The Growth Desk workspace with search growth analytics, editorial notebooks, and digital marketing tools"
-            width={1376}
-            height={768}
+            src="/images/growth-hacker-hero.webp"
+            alt="The Growth Hacker modern editorial desk featuring a laptop displaying compounding organic search analytics, strategy notebooks, and SEO planning blueprints"
+            width={1200}
+            height={675}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-101"
             loading="eager"
             fetchPriority="high"
             decoding="async"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-stone-950/20 to-transparent pointer-events-none" />
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-8 sm:right-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3 text-white">
@@ -97,6 +98,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDeployGuide, onOpenNew
             </Link>
           </div>
         </div>
+        <figcaption className="text-[11px] text-stone-500 italic text-right px-2 flex items-center justify-between">
+          <span className="not-italic uppercase font-mono text-[10px] text-stone-400">Featured Visual</span>
+          <span>The Growth Hacker digital workspace: tracking search growth trends, content sprints, and compounding traffic metrics.</span>
+        </figcaption>
       </section>
 
       {/* Primary Featured Story (Lead Story) */}

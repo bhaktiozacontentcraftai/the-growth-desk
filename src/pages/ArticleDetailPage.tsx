@@ -220,8 +220,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
               </div>
             )}
           </div>
-          <figcaption className="text-[11px] text-stone-500 italic text-right px-1">
-            {article.altText}
+          <figcaption className="text-[11px] text-stone-500 italic text-right px-1 flex items-center justify-between">
+            <span className="not-italic uppercase font-mono text-[10px] text-stone-400">Featured Visual</span>
+            <span>{article.imageDescription || article.altText}</span>
           </figcaption>
         </figure>
 

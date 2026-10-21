@@ -24,8 +24,9 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 08, 2026',
     updatedAt: 'October 13, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/blogging-for-beginners.webp',
-    altText: 'Bright creative blogging workspace with a lightweight laptop, notebook filled with article ideas, and fresh coffee',
+    heroImage: '/images/how-to-start-a-blog.webp',
+    altText: 'Creative blogging desk with a lightweight laptop showing an active blog writing editor, an editorial planner notebook with article ideas, and a coffee mug',
+    imageDescription: 'A focused creative blogging workspace equipped with an editorial planner journal and article drafting interface.',
     featured: true,
     popular: true,
     tableOfContents: [
@@ -83,9 +84,9 @@ export const ARTICLES: Article[] = [
           'Consistency is the engine of authority. Create an editorial workflow that separates ideation from writing and editing, using our proven blueprint for [writing SEO-friendly blog posts](/blog/seo-friendly-blog-writing/) that resonate with readers:',
         ],
         image: {
-          src: '/images/blogging-for-beginners.webp',
-          alt: 'Blogging workspace setup with laptop, article drafts, and editorial calendar notebook',
-          caption: 'Figure 1: The editorial workflow separating research, content drafting, and SEO optimization into repeatable sprints.',
+          src: '/images/how-to-start-a-blog.webp',
+          alt: 'Creative blogging desk with a lightweight laptop showing an active blog writing editor, an editorial planner notebook with article ideas, and a coffee mug',
+          caption: 'Figure 1: Clean, distraction-free blogging workstation with editorial planner and article draft.',
           aspectRatio: '16/9',
         },
         list: {
@@ -168,8 +169,9 @@ export const ARTICLES: Article[] = [
     publishedAt: 'October 14, 2026',
     updatedAt: 'October 16, 2026',
     author: EDITORIAL_AUTHOR,
-    heroImage: '/images/keyword-research-guide.webp',
-    altText: 'Desk workstation with monitor displaying search keyword analysis, organic traffic metrics, and keyword position rankings',
+    heroImage: '/images/keyword-research-tools.webp',
+    altText: 'Professional SEO specialist analyzing keyword search volume, ranking competition, and search intent metrics across dual computer monitors',
+    imageDescription: 'A dual-monitor keyword research workstation evaluating search queries, competition density, and user intent clusters.',
     featured: false,
     popular: true,
     tableOfContents: [
@@ -208,9 +210,9 @@ export const ARTICLES: Article[] = [
           'Not all keywords are created equal. When evaluating potential topics for your editorial calendar, assess these three essential dimensions:',
         ],
         image: {
-          src: '/images/keyword-research-guide.webp',
-          alt: 'Keyword research analytics dashboard showing search volume, keyword difficulty, and intent classification',
-          caption: 'Figure 1: Evaluating keyword volume, competition density, and user intent metrics inside a research workspace.',
+          src: '/images/keyword-research-tools.webp',
+          alt: 'Professional SEO specialist analyzing keyword search volume, ranking competition, and search intent metrics across dual computer monitors',
+          caption: 'Figure 1: Dual-screen keyword research workstation analyzing query search volume, ranking difficulty, and search intent clusters.',
           aspectRatio: '16/9',
         },
         table: {
@@ -316,7 +318,8 @@ export const ARTICLES: Article[] = [
     updatedAt: 'October 15, 2026',
     author: EDITORIAL_AUTHOR,
     heroImage: '/images/on-page-seo-checklist.webp',
-    altText: 'Computer monitor displaying on-page SEO content analysis, heading hierarchy validation, and meta tag checklist',
+    altText: 'Content strategist auditing on-page SEO factors with HTML heading hierarchy on screen and a printed pre-publish verification checklist',
+    imageDescription: 'On-page SEO audit workspace verifying title tags, heading structures, meta descriptions, and image alt attributes.',
     featured: false,
     popular: true,
     tableOfContents: [
@@ -374,8 +377,8 @@ export const ARTICLES: Article[] = [
         ],
         image: {
           src: '/images/on-page-seo-checklist.webp',
-          alt: 'Webpage on-page SEO content inspection and heading structure hierarchy checklist',
-          caption: 'Figure 1: Auditing heading tags, URL structure, and meta descriptions for on-page SEO.',
+          alt: 'Content strategist auditing on-page SEO factors with HTML heading hierarchy on screen and a printed pre-publish verification checklist',
+          caption: 'Figure 1: On-page SEO inspection verifying semantic heading hierarchy, meta descriptions, and image attributes.',
           aspectRatio: '16/9',
         },
         list: {

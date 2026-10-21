@@ -83,6 +83,7 @@ export interface Article {
   author: Author;
   heroImage: string;
   altText: string;
+  imageDescription?: string;
   featured?: boolean;
   popular?: boolean;
   tableOfContents: TableOfContentsItem[];
